@@ -9,7 +9,7 @@ class Accueil extends React.Component {
           style={styles.image}
           source = {require('../BDZ.png')}
         />
-        <Text style={styles.intro}> Le bar des Zés accueille tous les amoureux de l'apéritif dans une ambiance de proximité et d'élégance hors norme. </Text>
+        <Text style={styles.intro}>Le bar des Zés accueille tous les amoureux de l'apéritif dans une ambiance de proximité et d'élégance hors norme. </Text>
         <View style={styles.content_container}>
               <Text style={styles.main_title}>LA CARTE</Text>
         </View>

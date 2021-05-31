@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Linking, TouchableOpacity, Image, ScrollView } from 'react-native'
 
 class Contact extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.content_container}>
           <Text style={styles.main_title}>CONTACTEZ-NOUS</Text>
           <Text style={styles.sous_title}>TROUVEZ NOUS À CETTE ADRESSE</Text>
@@ -22,9 +22,17 @@ class Contact extends React.Component {
           Mail : <Text style={styles.lien} onPress={() => Linking.openURL('bardeszes@gmail.com')}>bardeszes@gmail.com{"\n"}</Text>
           </Text>
           <Text style={styles.sous_title}>OÙ NOUS TROUVER</Text>
-          <Text style={styles.default_text}>METTRE MAP SI POSSIBLE</Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/maps/place/49+Rue+Pargaminières,+31000+Toulouse/@43.6043238,1.4364856,17z/data=!3m1!4b1!4m5!3m4!1s0x12aebb63ff5df949:0xacfb957de45d8f89!8m2!3d43.6043238!4d1.4386743')}>
+            <View>
+              <Image
+                style={styles.image}
+                source = {require('../MAP.png')}
+              />
+            </View>
+          </TouchableOpacity>
+          <Text> {"\n"} </Text>
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }
@@ -71,6 +79,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     lineHeight: 22
+  },
+  image: {
+      width: 300,
+      height: 200,
+      marginLeft: 35,
+      marginTop: 15
   },
   })
 
