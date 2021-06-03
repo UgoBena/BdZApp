@@ -1,27 +1,33 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image,ScrollView } from 'react-native'
 
 class Jeux extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.content_container}>
-          <Text style={styles.main_title}>AMUSE TOI BIEN {"\n"}</Text>
-          <Text style={styles.default_text}> Mais attend encore un peu ça arrive.... {"\n"} {"\n"}</Text>
-          <Text style={styles.default_text}> Petit indice avec la photo : {"\n"} </Text>
-          <Image
-            style={styles.image}
-            source = {require('../DinoZe.jpg')}
-          />
-          <Text style={styles.text}> (Si tu trouves le jeu tu gagnes 1 pintes) </Text>
+      <ScrollView style={styles.scrollview_container}>
+        <View style={styles.container}>
+          <View style={styles.content_container}>
+            <Text style={styles.main_title}>AMUSE TOI BIEN {"\n"}</Text>
+            <Text style={styles.default_text}> Mais attend encore un peu ça arrive.... {"\n"} {"\n"}</Text>
+            <Text style={styles.default_text}> Petit indice avec la photo : {"\n"} </Text>
+            <Image
+              style={styles.image}
+              source = {require('../DinoZe.jpg')}
+            />
+            <Text style={styles.text}> (Si tu trouves le jeu tu gagnes 1 pintes) </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  scrollview_container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',

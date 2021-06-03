@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
   image: {
       width: 300,
       height: 200,
-      marginLeft: 35,
-      marginTop: 15
+      marginTop: 15,
+      margin:'auto'
   },
   })
 

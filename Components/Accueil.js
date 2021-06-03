@@ -13,50 +13,143 @@ class Accueil extends React.Component {
         <View style={styles.content_container}>
               <Text style={styles.main_title}>LA CARTE</Text>
         </View>
-        <View style={styles.content_pression}>
-          <Text style={styles.sous_titleBP}>BIÈRE PRESSION</Text>
-          <Text style={styles.default_text}>
-          BLONDE DEMI (25cl)_____________3€{"\n"}
-          BLONDE PINTE (50cl)____________5.50€{"\n"}
-          (PICON BIÈRE + 1 €){"\n"}
-          BIÈRE DU MOMENT DEMI (25cl)____4€{"\n"}
-          BIÈRE DU MOMENT (50cl)_________8€
-          </Text>
-          <Text style={styles.sous_titleBB}>BIÈRE BOUTEILLES</Text>
-          <Text style={styles.default_text}>
-          CORONA (33cl)____________________4€{"\n"}
-          SKOLL (33cl)_____________________4€{"\n"}
-          CIDRE MORDUE (27.5cl)____________4€
-          </Text>
-          <Text style={styles.sous_titleC}>COCKTAILS</Text>
-          <Text style={styles.default_text}>
-          GET PERRIER (33cl)_______________5€{"\n"}
-          SUZE TONIC (33cl)________________5€{"\n"}
-          APEROL SPRITZ (33cl)_____________6€{"\n"}
-          CHIEN DE LA C***E (33cl)_________6€{"\n"}
-          <Text style={styles.description_alcool}>(Planteur, Proscecco, Crème de cassis)</Text>
-          </Text>
+        <View style={styles.content_carte}>
+          <View>
+            <Text style={styles.sous_titleBP}>BIÈRE PRESSION</Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>BLONDE DEMI (25cl)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>3€</Text>
+            </View>
 
-          <Text style={styles.sous_titleS}>SOFT (33cl)</Text>
-          <Text style={styles.default_text}>
-          COCA-COLA _______________________2€{"\n"}
-          PERRIER _________________________2€{"\n"}
-          SEVEN UP ________________________2€{"\n"}
-          SCHWEPPES TONIC _________________2€{"\n"}
-          REDBULL _________________________2€{"\n"}
-          CAFÉ ____________________________2€{"\n"}
-          JUS DE FRUIT ____________________2€{"\n"}
-          CACOLAC _________________________2€{"\n"}
-          </Text>
-          <Text style={styles.sous_titleA}>TAPAS</Text>
-          <Text style={styles.default_text}>
-          PLANCHE BDZ (X 1 PORTION) _______5€{"\n"}
-          <Text style={styles.description_tapas}>(Assortiment de fromages et charcutteries)</Text>
-          </Text>
-          <Text style={styles.sous_titleV}>VINS</Text>
-          <Text style={styles.default_text}>
-          VIN _____________________________2€{"\n"}
-          </Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>BLONDE PINTE (25cl)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>5.5€</Text>
+            </View>
+
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>PICON BIÈRE</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>+1€</Text>
+            </View>
+
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>BIÈRE DU MOMENT DEMI</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>4€</Text>
+            </View>
+
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>BIÈRE DU MOMENT PINTE</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>8€</Text>
+            </View>
+          </View>
+          <View>
+            <Text style={styles.sous_titleBB}>BIÈRE BOUTEILLES</Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>CORONA (33cl)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>4€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>SKOLL (33cl)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>4€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>CIDRE MORDUE (27.5cl)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>4€</Text>
+            </View>
+          </View>
+
+          <View>
+            <Text style={styles.sous_titleC}>COCKTAILS (33cl)</Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>GET PERRIER</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>8€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>SUZE TONIC</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>5€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>APEROL SPRITZ</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>6€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>CHIEN DE LA C***E</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>6€</Text>
+            </View>
+            <Text style={styles.description_alcool}>(Planteur, Proscecco, Crème de cassis)</Text>
+          </View>
+          <View>
+            <Text style={styles.sous_titleS}>SOFT (33cl)</Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>COCA-COLA</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>PERRIER</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>sEVEN UP</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>SWCHEPPES TONIC</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>REDBULL</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>CAFÉ</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>JUS DE FRUIT</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>CACOLAC</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+          </View>
+          <View>
+            <Text style={styles.sous_titleA}>TAPAS</Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>PLANCHE BDZ (x1 PORTION)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>5€</Text>
+            </View>
+            <Text style={styles.description_tapas}>(Assortiment de fromages et charcutteries)</Text>
+          </View>
+          <View>
+            <Text style={styles.sous_titleA}>VINS</Text>
+            <View style={styles.boisson_item}>
+              <Text style={styles.name_text}>VIN (16cl)</Text> 
+              <View style={styles.price_name_separator}></View> 
+              <Text style={styles.price_text}>2€</Text>
+            </View>
+            <Text style={styles.description_alcool}>(Rouge, rosé)</Text>
+          </View>
         </View>
       </ScrollView>
 
@@ -79,7 +172,7 @@ const styles = StyleSheet.create({
   image: {
       width: 400,
       height: 400,
-      marginLeft: -15
+      margin:"auto"
   },
   main_title: {
     fontFamily: 'Courier New',
@@ -88,7 +181,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
 
   },
-  content_pression: {
+  content_carte: {
     flex:2
   },
   sous_titleBP: {
@@ -145,13 +238,44 @@ const styles = StyleSheet.create({
     marginTop: 40,
     textAlign: 'center'
   },
+
   default_text: {
     fontWeight: "bold",
     fontFamily: 'Courier New',
     fontSize: 15,
     marginLeft: 20,
     marginTop: 10,
-    lineHeight: 25
+    lineHeight: 25,
+  },
+
+
+  boisson_item: {
+    flexDirection:"row",
+    alignSelf : "stretch",
+    alignItems:"flex-end",
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10,
+  },
+
+  name_text: {
+    alignSelf : "stretch",
+    fontWeight: "bold",
+    fontFamily: 'Courier New',
+    fontSize: 15,
+    
+  },
+  price_name_separator: {
+    flex:30,
+    borderBottomWidth :2,
+    borderBottomColor: '#000',
+  },
+  price_text: {
+    width:"3em",
+    fontWeight: "bold",
+    fontFamily: 'Courier New',
+    fontSize: 15,
+    marginLeft:3
   },
   description_alcool: {
     fontFamily: 'Courier New',
