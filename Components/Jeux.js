@@ -1,23 +1,38 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image,ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground,ScrollView,TouchableOpacity, Image } from 'react-native'
 
 class Jeux extends React.Component {
+
+
+
+  startDinoGame = () =>{
+    this.props.navigation.navigate('DinoGame');
+  }
+
+  startRoulette(){
+    return;
+  }
 
   render() {
     return (
       <ScrollView style={styles.scrollview_container}>
-        <View style={styles.container}>
-          <View style={styles.content_container}>
-            <Text style={styles.main_title}>AMUSE TOI BIEN {"\n"}</Text>
-            <Text style={styles.default_text}> Mais attend encore un peu ça arrive.... {"\n"} {"\n"}</Text>
-            <Text style={styles.default_text}> Petit indice avec la photo : {"\n"} </Text>
-            <Image
-              style={styles.image}
-              source = {require('../DinoZe.jpg')}
-            />
-            <Text style={styles.text}> (Si tu trouves le jeu tu gagnes 1 pintes) </Text>
-          </View>
-        </View>
+        <TouchableOpacity style={styles.game_container}
+        onPress={() => this.startDinoGame()}>
+          <ImageBackground source={require('../DinoZe.jpg')} style={styles.game_bg_image}>
+            <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+              <Text style={styles.game_title_even}> Jeu du Dinosaure</Text>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.game_container} disabled={true}
+        onPress={() => startRoulette()}>
+          <ImageBackground source={require('../roulette.jpg')} style={styles.game_bg_image}>
+            <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+              <Text style={styles.game_title_odd}> Roulette de la Pinte (en developpement)</Text>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
       </ScrollView>
     )
   }
@@ -28,42 +43,48 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  container: {
+  game_container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
   },
-  image: {
-    width: 350,
-    height: 350,
-    marginTop: 10,
+  game_bg_image: {
+    width:"80%",
+    height:"100%",
+    resize:"contain"
   },
-main_title: {
+game_title_even: {
   fontFamily: 'Courier New',
   fontWeight: "bold",
   fontSize: 30,
   textAlign: 'center',
-  marginTop: 60
-
+  marginTop: 60,
+  color: "#0663DA"
 },
-text: {
+game_title_odd: {
   fontFamily: 'Courier New',
-  fontSize: 5,
+  fontWeight: "bold",
+  fontSize: 30,
   textAlign: 'center',
-  marginTop: 70
+  marginTop: 60,
+  color: "#d73719"
 },
+ 
 default_text: {
   fontWeight: "bold",
   fontFamily: 'Courier New',
-  color: "#9EA1A5",
+  color: "red",
   fontSize: 17,
-  textAlign: 'center',
-  marginTop: 10,
-  lineHeight: 22
 },
-content_container: {
-  flex: 1,
-},
+text_container:{
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: 'center',
+  alignItems: 'center'
+}
   })
 
 export default Jeux

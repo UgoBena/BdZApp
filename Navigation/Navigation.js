@@ -7,7 +7,9 @@ import { Ionicons } from '@expo/vector-icons'
 import Accueil from '../Components/Accueil'
 import Contact from '../Components/Contact'
 import Calendrier from '../Components/Calendrier'
+import JeuxPreview from '../Components/Jeux-Preview'
 import Jeux from '../Components/Jeux'
+import DinoGame from '../Components/DinoGame'
 
 const Nav = createBottomTabNavigator()
 
@@ -67,7 +69,7 @@ export default function MainTabNavigator() {
                 />
                 <Nav.Screen
                     name='Jeux'
-                    component={Jeux}
+                    component={JeuxPreview}
                 />
                 <Nav.Screen
                     name='Contact'
